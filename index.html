@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JTExpress - Your Express Delivery Service</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+    <header>
+        <img id="logo" src="assets/Logo-JTExpress.png" alt="Logo-JTExpress">
+        <nav>
+            <ul><a href="#"> <img id="hamburger" src="assets/Hamburger.png" alt=""></a></ul>
+            <ul><a href="RegisterLogin.html"> <img src="assets/LogOut.png" alt=""> LOGIN/REGISTER</a></ul>
+            <ul><a href="file:///E:/latihan%20website/JTExpress/contactMassage.html?name=&email=&massage=&myButton=#"> <img src="assets/AboutUs.png" alt=""> ABOUT US</a></ul>
+            <ul><a href="#"> <img src="assets/Services.png" alt=""> SERVICES</a></ul>
+            <ul><a href="index.html"> <img src="assets/home.png" alt=""> HOME</a></ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="slider">
+            <img src="assets/Slider-1.jpg" alt="">
+            <img src="assets/Slider-2.jpg" alt="">
+            <img src="assets/Slider-3.jpg" alt="">
+            <img src="assets/Slider-4.jpg" alt="">
+            <img src="assets/Slider-5.jpg" alt="">
+        </div>
+    </div>
+    <div class="break"></div>
+    <div class="excess">
+        <h1>Terkirim dengan Cepat, Selamat, dan Tepat!</h1>
+        <button>Lihat Lebih</button>
+        <div class="container-card">
+            <div class="card"> 
+                <img src="assets/COD.png" alt="">
+                <h3>Cash On Delivery (COD)</h3>
+                <p>Pilihan untuk membayar saat menerima barang dalam pembelian online di beberapa platform e-commerce</p>
+            </div>
+            <div class="card">
+                <img src="assets/HP.png" alt="">
+                <h3>JTE Aplikasi</h3>
+                <p>Kemudahan mengakses semua fasilitas JTE dalam genggaman Anda.</p>
+            </div>
+            <div class="card">
+                <img src="assets/Layanan-Asuransi.png" alt="">
+                <h3>Layanan Asuransi</h3>
+                <p>Sebuah aplikasi layanan yang mempermudah pengambilan paket secara GRATIS, tanpa memandang berat paket atau asal tujuan</p>
+            </div>
+            <div class="card">
+                <img src="assets/SobatJTE.png" alt="">
+                <h3>SobatJTE</h3>
+                <p>Program membership untuk pelanggan setia JTE dengan berbagai keuntungan</p>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <img src="assets/Logo-JTExpress.png" alt="">
+        <div class="footer-alamat">
+            <div class="kantorPusat">
+                <h3>KANTOR PUSAT</h3>
+                <br>
+                <p>PT. Jasa Transparan Express</p>
+                <p>Jl. Sudirman No. 11 Jakarta Pusat 11440 Indonesia</p>
+                <p>Contact center. 089513891995</p>
+                <p>Office. (62-21) XXXXX</p>
+                <p>Fax. (62-21) XXXXXX</p>
+                <p>Email. customercare@jte.co.id</p>
+            </div>
+            <div class="tentangJTE">
+                <h3>Tentang JTE</h3>
+                <br>
+                <p>Profil Perusahaan</p>
+                <p>FAQ</p>
+            </div>
+            <div class="services">
+                <h3>Service</h3>
+                <br>
+                <p>Hubungi Kami</p>
+            </div>
+        </div>
+
+        <div class="sosmed">
+            <ul><a class="instagram" href="#"><i class="fa-brands fa-instagram" ></i></a></ul>
+            <ul><a class="twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a></ul>
+            <ul><a class="tiktok" href="#"><i class="fa-brands fa-tiktok"></i></a></ul>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright © 2023 PT. Jasa Transparan Express. All Rights Reserved</p>
+        <img src="assets/Logo-JTE.png" alt="">
+    </div>
+    
+
+    <script>  
+        const slider = document.querySelector('.slider');
+        let slideIndex = 1;
+        function showSlide(index) {
+          slider.style.transform = `translateX(-${(index - 1) * 20}%)`;
+        }
+        function nextSlide() {
+          slideIndex = (slideIndex % 5) + 1;
+          showSlide(slideIndex);
+        }
+        setInterval(nextSlide, 3000); // Ganti slide setiap 3 detik
+      </script>
+</body>
+</html>
