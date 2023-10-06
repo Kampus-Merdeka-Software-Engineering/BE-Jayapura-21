@@ -3,10 +3,12 @@ const app = express();
 const PORT = 3000;
 const bodyParser = require("body-parser");
 const { InputData } = require("./models");
+const cors = require("cors");
 
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
+app.use(cors({origin:"*"}));
 
 app.get("/tracking/:No_id", async (req, res) => {
     try {
