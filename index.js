@@ -34,6 +34,40 @@ app.get("/tracking/:No_id", async (req, res) => {
     }
 });
 
+app.post("/Tracking", async (req, res) =>{
+  try{
+    const {
+      Nama_Pengirim,
+      Email_Pengirim,
+      Alamat_Pengirim,
+      Nama_Penerima,
+      Email_Penerima,
+      Alamat_Penerima,
+      Your_Message,
+    } = req.body;
+    const No_Id = new Date().getMinutes();
+    await InputData.create({
+      No_Id,
+      Nama_Pengirim,
+      Email_Pengirim,
+      Alamat_Pengirim,
+      Nama_Penerima,
+      Email_Penerima,
+      Alamat_Penerima,
+      Your_Message,
+    });
+    return res.send({
+      message: "Data berhasil disimpan",
+      status: 200,
+      No_Id,
+    });
+  } catch (error) {
+    return res.status(500).send({
+      message: "Gagal menambahkan data",
+    });
+  }
+});
+
 app.listen(PORT, (req, res) => {
     console.log(`Server running on localhost:${PORT}`);
 });
