@@ -45,7 +45,7 @@ app.post("/Tracking", async (req, res) =>{
       Alamat_Penerima,
       Your_Message,
     } = req.body;
-    const No_Id = new Date().getMinutes();
+    const No_Id = new Date().getTime();
     await InputData.create({
       No_Id,
       Nama_Pengirim,
