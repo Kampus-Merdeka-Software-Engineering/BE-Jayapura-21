@@ -34,7 +34,7 @@ app.get("/tracking/:No_id", async (req, res) => {
     }
 });
 
-app.post("/Tracking", async (req, res) =>{
+app.post("/InputBarang", async (req, res) =>{
   try{
     const {
       Nama_Pengirim,
